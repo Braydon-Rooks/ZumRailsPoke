@@ -1,0 +1,6 @@
+@ZumPokeApi_HostAddress = http://localhost:5094
+
+GET {{ZumPokeApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
