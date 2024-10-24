@@ -44,7 +44,7 @@ namespace ZumPokeApi.Controllers
                 var currentFighter = fighters[i];
                 var fightStats = fightService.GetFightStats(currentFighter, fighters.Where((value, y) => y != i).ToList());
 
-                pokemonFightStats.Add(new PokemonFightStats(currentFighter.id, currentFighter.name, currentFighter.type, fightStats[1], fightStats[0], fightStats[-1]));
+                pokemonFightStats.Add(new PokemonFightStats(currentFighter.id, currentFighter.name, currentFighter.type, fightStats["win"], fightStats["loss"], fightStats["draw"]));
             }
 
             var sorted = pokemonFightStats.AsQueryable().OrderBy($"{filter.SortBy} {filter.SortDirection}");

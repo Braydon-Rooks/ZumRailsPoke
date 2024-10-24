@@ -14,7 +14,7 @@ import { PokemonFightServiceService } from '../pokemonFightService.service';
 export class TheFormComponent {
   fightService: PokemonFightServiceService = inject(PokemonFightServiceService);
   sortByOptions: Array<string> = ["Name","Id","Ties","Wins","Losses"];
-  sortDircOptions: Array<string> = ["Asc", "Desc"];
+  sortDircOptions: Array<string> = ["Asc", "Desc", ""];
   
   pokemonFilterForm = new FormGroup({
     sortBy: new FormControl(''),
